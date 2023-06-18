@@ -1,0 +1,11 @@
+{% for employee in employees %}
+  <p> Имя сотрудника - {{ employee.name }},
+    {% if show_age %}
+      возраст - {{ employee.age }},
+    {% else %}
+      Возраст скрыт,
+    {% endif %}
+    навыки - {{ employee.skills }}</p>
+{% empty %}
+  <p>Сотрудников нет</p>
+{% endfor %}

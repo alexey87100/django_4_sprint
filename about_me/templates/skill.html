@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Сотрудники со скилом {{ skill.name }}
+{% endblock %}
+
+{% block header %}
+  Сотрудники со скилом {{ skill.name }}
+{% endblock %}
+
+{% block content %}
+  <p><a href="{% url 'main:index' %}">Ссылка на главную</a></p>
+  {% include 'employees.html' with show_age=False %}
+{% endblock %}
