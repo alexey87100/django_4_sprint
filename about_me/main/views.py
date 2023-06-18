@@ -6,6 +6,11 @@ from .data import EMPLOYEES, SKILLS
 
 def index(request):
     """Главная страница проекта."""
+    new_employees = []
+    for employee in EMPLOYEES:
+        employee_skills = employee['skills']
+        for skill_id in employee_skills:
+            ...
 
     context = {
         'employees': EMPLOYEES,
